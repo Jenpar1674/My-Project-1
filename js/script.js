@@ -21,13 +21,14 @@ var quotes = [
     source: 'Oscar Wilde',
     citation: '',
     year: ''
+    
  },
  {
     quote: 'It is never too late to be what you might have been.',
     source: 'George Eliot',
     citation: '',
     year: '' 
-
+    
  },
 
  {
@@ -38,18 +39,17 @@ var quotes = [
 
   },
   {
-    quote: 'Be the change that you wish to see in the world',
+    quote: 'Be the change that you wish to see in the world.',
     source: 'Mahatma Gandhi',
     citation:'' ,
     year: ''
-
+    
   },
   {
-    quote: 'We delight in the beauty of the butterfly but rarely admit the changes it has gone through to achieve that beauty',
+    quote: 'We delight in the beauty of the butterfly but rarely admit the changes it has gone through to achieve that beauty.',
     source: 'Maya Angelou',
     citation: '291 Maya Angelou Quotes- Jeff Napier',
-    year: 'June 5 2014 ' 
-
+    year: 'June 5 2014 '   
   }
 
 
@@ -98,8 +98,23 @@ function printQuote(){
     message += "<span class='year'>" + randomQ.year + "</span>";
     message += "</p>"
   
-document.getElementById('quote-box').innerHTML=message;
+    function random_bg_color() {
+      var x = Math.floor(Math.random() * 256);
+      var y = Math.floor(Math.random() * 256);
+      var z = Math.floor(Math.random() * 256);
+      var bgColor = "rgb(" + x + "," + y + "," + z + ")";
+   console.log(bgColor);
     
+      document.body.style.background = bgColor;
+      }
+  
+  random_bg_color();
+  
+
+    
+
+document.getElementById('quote-box').innerHTML=message;
+
  
 }
 
@@ -111,7 +126,9 @@ document.getElementById('quote-box').innerHTML=message;
   comment.
 ***/
 
-document.getElementById('loadQuote').addEventListener("click", printQuote, false);
+
+document.getElementById('loadQuote').addEventListener("click", printQuote, false)
+    setInterval(function(){},25000);
 
 
 // Remember to delete the comments that came with this file, and replace them with your own code comments.
