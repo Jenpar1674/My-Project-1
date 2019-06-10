@@ -10,16 +10,11 @@ var quotes = [
   {
     quote:'Be yourself; everyone else is already taken.',
     source: 'Oscar Wilde',
-    citation: '',
-    year: '',
     type: 'poet, playwright'
-  
  },
  {
     quote: 'It is never too late to be what you might have been.',
     source: 'George Eliot',
-    citation: '',
-    year: '',
     type: 'novelist'
     
  },
@@ -27,15 +22,11 @@ var quotes = [
  {
   quote: 'Life without liberty is like a body without spirit.',
   source: 'Kahlil Gibran',
-  citation: '',
-  year: '' ,
   type: 'poet'
   },
   {
     quote: 'Be the change that you wish to see in the world.',
     source: 'Mahatma Gandhi',
-    citation:'' ,
-    year: '',
     type: 'activist'
     
   },
@@ -61,9 +52,16 @@ function printQuote(){
   
     message += "<p class='quote'>" + randomQ.quote + "</p>";
     message += "<p class='source'>"+ randomQ.source;
-    message += "<span class='type'>" + randomQ.type + "</span>";
-    message += "<span class='citation'>" + randomQ.citation +"</span>";
-    message += "<span class='year'>" + randomQ.year + "</span>";
+    if (randomQ.type){
+      message += "<span class='type'>" + randomQ.type + "</span>";
+    }
+    if (randomQ.year){
+      message += "<span class='year'>" + randomQ.year + "</span>";
+    }
+    
+    if (randomQ.citation){
+      message += "<span class='citation'>" + randomQ.citation +"</span>";
+    }
     message += "</p>"
 
   document.getElementById('quote-box').innerHTML=message;
