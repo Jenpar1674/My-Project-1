@@ -69,9 +69,9 @@ function printQuote(){
 //changes the color of the background screen randomly for each new quote 
 
 function random_bg_color() {
-  var x = Math.floor(Math.random() * 256);
-  var y = Math.floor(Math.random() * 256);
-  var z = Math.floor(Math.random() * 256);
+  var x = Math.floor(Math.random() * 240);
+  var y = Math.floor(Math.random() * 240);
+  var z = Math.floor(Math.random() * 240);
   var bgColor = "rgb(" + x + "," + y + "," + z + ")";
 
   console.log(bgColor);
@@ -81,11 +81,13 @@ function random_bg_color() {
 }
 
 random_bg_color();
+}
 
 // sets interval of 25 seconds until automatically changes to a new quote
 
 setInterval(function(){printQuote()},25000);
-}
+
+
 
 document.getElementById('loadQuote').addEventListener("click", printQuote, false);
   

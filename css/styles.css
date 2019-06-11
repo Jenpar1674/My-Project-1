@@ -7,6 +7,7 @@ body {
   background-color: #36b55c;
   color: white;
   font-family: 'Playfair Display', serif;
+  
 }
 
 #quote-box {
@@ -62,13 +63,32 @@ body {
 }
 
 .citation:before {
-  content: ", ";
+  content: " ";
   font-style: normal;
 }
 
 .year:before {
-  content: ", ";
+  content: "  ";
   font-style: normal;
+}
+
+
+.type {
+  font-size: 1rem;
+  letter-spacing: 0.05em;
+  line-height: 1.1;
+  text-align: right;
+  margin-right: 4em;
+}
+
+.citation {
+  font-style: italic;
+}
+.type:before {
+  content: ", ";
+}
+.type:after {
+  content: ".";
 }
 
 #loadQuote {
@@ -81,12 +101,13 @@ body {
   border-radius: 4px;
   border: 2px solid #fff;
   color: #fff;
-  background-color: #36b55c;
+  background-color: #b53660;
   padding: 15px 0;
   transition: .5s ;
 }
 #loadQuote:hover {
-  background-color: rgba(255,255,255,.25);
+  
+  background-color: #000066;
 }
 
 #loadQuote:focus {
